@@ -10,13 +10,16 @@ export class QueryTodoDTO {
   showCompleted?: boolean;
 }
 
+export type QueryTodo = QueryTodoDTO;
+
 export class AddTodoDTO {
   @IsString()
   title: string;
-
+  
   @IsDate()
+  @IsOptional()
   @Type(() => Date)
-  dueDate: Date;
+  dueDate?: Date;
 }
 
-export type QueryTodo = QueryTodoDTO;
+export type AddTodo = AddTodoDTO;

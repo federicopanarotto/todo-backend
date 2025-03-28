@@ -30,7 +30,6 @@ export const add = async (
     const added = await addTodo({
         title: title,
         dueDate: dueDate,
-        completed: false
       });
 
     res.status(201).json(added);

@@ -9,7 +9,7 @@ const todoSchema = new Schema<Todo>({
 
 todoSchema.virtual('expired').get(function() {
   const now = new Date();
-  return this.completed ? true : this.dueDate < now;
+  return this.dueDate < now;
 });
 
 todoSchema.set('toJSON', {
