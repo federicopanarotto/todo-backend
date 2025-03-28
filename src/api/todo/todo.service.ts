@@ -18,6 +18,5 @@ export async function addTodo(todo: Todo): Promise<Todo> {
 
 export async function checkTodo(todoId: string, check: boolean): Promise<Todo | null> {
   const todo = await TodoModel.findByIdAndUpdate(todoId, { completed: check }, { new: true });
-  console.log(todo);
   return todo;
 }

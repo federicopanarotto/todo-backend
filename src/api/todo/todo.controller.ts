@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { Response, NextFunction } from "express";
 import { TypedRequest } from '../../utils/typed-request.interface';
 import { AddTodoDTO, QueryTodoDTO } from "./todo.dto";
 import { Todo } from "./todo.entity";
@@ -59,4 +59,3 @@ export const check = (check: boolean) => {
     }
   }
 }
-
