@@ -9,6 +9,9 @@ const todoSchema = new Schema<Todo>({
 
 todoSchema.virtual('expired').get(function() {
   const now = new Date();
+  if (this.dueDate === undefined || this.dueDate === null) {
+    return false;
+  }
   return this.dueDate < now;
 });
 
